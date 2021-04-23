@@ -1,27 +1,56 @@
 body{
     background-color: rgb(38, 33, 39);
 }
-.card-body{
+.score-timer {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;   
+
+}
+
+#top-score{
+    border: 2px solid white;
+    background-color: purple;
+    border-radius: 20px;
+    line-height: 30px;
+    width: 200px 
+}
+#timer {
+    float:right;
+    border: 2px solid white;
+    background-color: purple;
+    border-radius: 20px;
+    line-height: 30px;
+    width: 100px;
+}
+
+.card-body, .container-1, .container-2, .container-3, .container-4, .container-5 {
     color: white;
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 400px;
     margin-left: 50%;
     display: inline;
     text-align: center;
     padding: 100px;
     border: none;
+    background-color: rgb(38, 33, 39); ;
     position: absolute;
     top: 25%;
     left: 30%;
     margin: 0 auto;
-}
+ 
+  }
+
 #title{
  
-    font-size:35px;
+    font-size:45px;
 }  
+p{ 
+    font-size: 20px;
+}
 .start-btn{
-
-border:none;
+margin-top: 20px;
+border:2px solid white;
 background-color: purple;
 border-radius: 25px;
 display: inline;
@@ -30,5 +59,33 @@ line-height: 40px;
 
 
 
+
 }
+
+
+   
+
+
+.quest-1, .quest-2, .quest-3, .quest-4, .quest-5{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: 35px;
 }
+
+.quest-1-opt, .quest-2-opt, .quest-3-opt, .quest-4-opt, .quest-5-opt {
+   font-size: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: purple;
+    line-height:30px ;
+    width:300px;
+    text-align: center;
+    margin-top: 20px;
+   margin-left: 150px;
+    
+  }
+   
+
+
+
+    
+   
