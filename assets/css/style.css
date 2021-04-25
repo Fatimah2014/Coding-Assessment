@@ -1,5 +1,10 @@
+::before ::after{
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body{
-    background-color: rgb(38, 33, 39);
+    background-color: rgb(148, 132, 151);
 }
 .score-timer {
     display:flex;
@@ -9,13 +14,18 @@ body{
 }
 
 #top-score{
+    color: white;
     border: 2px solid white;
     background-color: purple;
     border-radius: 20px;
     line-height: 30px;
-    width: 200px 
+    width: 200px;
+    text-align: center;
+
+
 }
 #timer {
+    color: white;
     float:right;
     border: 2px solid white;
     background-color: purple;
@@ -24,68 +34,70 @@ body{
     width: 100px;
 }
 
-.card-body, .container-1, .container-2, .container-3, .container-4, .container-5 {
-    color: white;
-    width: 600px;
-    height: 400px;
-    margin-left: 50%;
-    display: inline;
-    text-align: center;
-    padding: 100px;
-    border: none;
-    background-color: rgb(38, 33, 39); ;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-    margin: 0 auto;
- 
-  }
 
+.card-body, .container  {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%, -50%) ;
+align-items: center;
+text-align: center;
+padding: 10px;
+width: 25%;
+border: 1px solid purple;
+background-color: rgb(170, 107, 170);
+box-shadow: 0 0 10px 2px ;
+border-radius: 20px;
+
+   
+   
+
+
+
+}
 #title{
- 
+
     font-size:45px;
 }  
+
 p{ 
     font-size: 20px;
 }
-.start-btn{
-margin-top: 20px;
-border:2px solid white;
-background-color: purple;
-border-radius: 25px;
-display: inline;
-font-size: 30px;
-line-height: 40px;
 
 
-
-
-}
-
-
-   
-
-
-.quest-1, .quest-2, .quest-3, .quest-4, .quest-5{
+.quest{
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    font-size: 35px;
+    font-size: 40px;
 }
 
-.quest-1-opt, .quest-2-opt, .quest-3-opt, .quest-4-opt, .quest-5-opt {
-   font-size: 20px;
-    border: 1px solid white;
-    border-radius: 20px;
-    background-color: purple;
-    line-height:30px ;
-    width:300px;
-    text-align: center;
-    margin-top: 20px;
-   margin-left: 150px;
+
+   .btn-grid {
+    display: grid;
+    gap: 5px;
     
   }
-   
 
 
+.button,
+.start-btn{
+        
+        color: white;
+        border:2px solid white;
+        background-color: purple;
+        border-radius: 25px;
+        font-size: 30px;
+        line-height: 40px;
+        padding:  5px;
+        box-shadow: 0 0 10px 2px;
+        
+        }   
 
-    
-   
+  .button:hover, .start-btn:hover{
+    border-color: purple;
+}
+
+.hide{
+    display: none;
+}
+
