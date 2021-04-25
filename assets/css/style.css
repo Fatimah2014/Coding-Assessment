@@ -4,6 +4,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
+
     background-color: rgb(148, 132, 151);
 }
 .score-timer {
@@ -25,6 +26,8 @@ body{
 
 }
 #timer {
+    display: flex;
+    
     color: white;
     float:right;
     border: 2px solid white;
@@ -34,28 +37,33 @@ body{
     width: 100px;
 }
 
-
+   
 .card-body, .container  {
+    display: flex;
+    display: grid;
+    
+    width: 25%;
     color: white;
     position: absolute;
     top: 50%;
     left:50%;
     transform:translate(-50%, -50%) ;
-align-items: center;
-text-align: center;
-padding: 10px;
-width: 25%;
-border: 1px solid purple;
-background-color: rgb(170, 107, 170);
-box-shadow: 0 0 10px 2px ;
-border-radius: 20px;
-
-   
-   
-
-
-
+    align-items: center;
+    text-align: center;
+    padding: 15px 30px;
+    border: 1px solid purple;
+    background-color: rgb(170, 107, 170);
+    box-shadow: 0 0 10px 2px ;
+    border-radius: 20px;
+    height: 400px;
 }
+
+
+
+ 
+
+
+
 #title{
 
     font-size:45px;
@@ -72,23 +80,21 @@ p{
 }
 
 
-   .btn-grid {
+.btn-grid {
     display: grid;
     gap: 5px;
     
   }
-
-
 .button,
 .start-btn{
-        
+        margin-top: 20px;
         color: white;
         border:2px solid white;
         background-color: purple;
         border-radius: 25px;
-        font-size: 30px;
-        line-height: 40px;
-        padding:  5px;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 5px;
         box-shadow: 0 0 10px 2px;
         
         }   
@@ -97,7 +103,4 @@ p{
     border-color: purple;
 }
 
-.hide{
-    display: none;
-}
 
