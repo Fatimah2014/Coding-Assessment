@@ -93,7 +93,7 @@ const questions = [
     question: "what does HTML stand for?",
     answer: "btn-2",
     options: [
-     "home tool Markup Language",
+     "Home tool Markup Language",
      "Hyper Link and text Mark up Langueage",
      "Hyper Text Markup Language",
      "Home text  Markup Languege", 
@@ -113,7 +113,6 @@ options: [
 question: "What does css stand for?",
 answer:"btn-0",
 options: [
-    "WHat does css stand for?",
     "Cascading Style Sheet",
     "Colorful Style Sheets",
     "Computer Stle Sheets",
@@ -127,7 +126,7 @@ options: [
     "text-size",
     "font-size",
     "text-style",
-    "font-size",
+    "font-height",
 ]
 },
 {
@@ -143,7 +142,7 @@ options:[
 },
 {
 question: 'How do you write "Hello World" in an alert box?',
-answer: 'button',
+answer: 'btn-3',
 options:[
    "msgBox('Hello World')",
     "msg('Hello World')",
@@ -152,90 +151,7 @@ options:[
 ]
 }
 ]
-// var button1= document.querySelector('#btn-1');
-// var button2= document.querySelector('#btn-2');
-// var button3= document.querySelector('#btn-3');
- 
-// function questionElement(index){
-//     let question = document.querySelector("question");
-//     let button = document.querySelector("btn");
-//     document.querySelector("question").textContent = question[index].questions;
-//     document.querySelector("btn-0").textContent = question[index].options;
-//     document.querySelector("btn-1").textContent = question[index].options;
-//     document.querySelector("btn-2").textContent = question[index].options;
-//     document.querySelector("btn-3").textContent = question[index].options;
-//     }
-// button0.addEventListener("click", function(event) {
-//  console.log('event', event.target.id)
-//  answer(event.target.id)
-//  count++;
-//  showQuestion(count);
 
-
-// });
-// button1.addEventListener("click", function(event) {
-//  console.log('event', event.target.id)
-//  answer(event.target.id)
-//  count++;
-//  showQuestion(count);
-// });
-// button2.addEventListener("click", function(event) {
-//  console.log('event', event.target.id)
-//  answer(event.target.id)
-//  count++;
-//  showQuestion(count);
-// });
-
-// button2.addEventListener("click", function(event) {
-//  console.log('event', event.target.id)
-//  answer(event.target.id)
-//  count++;
-//  showQuestion(count);
-// });
-// // event listener for buttons
-// var button0= document.querySelector('#btn-0');
-// var button1= document.querySelector('#btn-1');
-// var button2= document.querySelector('#btn-2');
-// var button3= document.querySelector('#btn-3');
- 
-// function questionElement(index){
-//     let question = document.querySelector("question");
-//     let button = document.querySelector("btn");
-//     document.querySelector("question").textContent = question[index].questions;
-//     document.querySelector("btn-0").textContent = question[index].options;
-//     document.querySelector("btn-1").textContent = question[index].options;
-//     document.querySelector("btn-2").textContent = question[index].options;
-//     document.querySelector("btn-3").textContent = question[index].options;
-//     }
-
-// button0.addEventListener("click", function(event) {
-//     console.log('event', event.target.id)
-//     answer(event.target.id)
-//     count++;
-//     showQuestion(count);
-   
-   
-//    });
-//    button1.addEventListener("click", function(event) {
-//     console.log('event', event.target.id)
-//     answer(event.target.id)
-//     count++;
-//     showQuestion(count);
-//    });
-//    button2.addEventListener("click", function(event) {
-//     console.log('event', event.target.id)
-//     answer(event.target.id)
-//     count++;
-//     showQuestion(count);
-//    });
-   
-//    button2.addEventListener("click", function(event) {
-//     console.log('event', event.target.id)
-//     answer(event.target.id)
-//     count++;
-//     showQuestion(count);
-//    });
-   
 // function chooseAnswer(id){
 //     if (id === question[count].option) {
 //         Audio.play();

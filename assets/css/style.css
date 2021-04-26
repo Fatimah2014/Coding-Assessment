@@ -77,7 +77,7 @@ p{
   }
 .button,
 .start-btn,
-    #clear,#navigate {
+    #clear,#navigate, .btn{
 
         margin-top: 20px;
         color: white;
@@ -91,6 +91,8 @@ p{
         
        
         } 
+
+        
         #sub-btn{
         margin-top: 20px;
         color: white;
