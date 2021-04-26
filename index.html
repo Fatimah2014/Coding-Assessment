@@ -5,58 +5,71 @@
         <meta name= 'viewpoint' content='width-device-width, initial-scale-1.0'>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel='stylesheet' href='./assets/css/style.css'>
+        <title>Code-Quize</title>
         <body>
-              <header class="score-timer">
-                  <h3 id='top-score'><span>View High Score</span></h3>
-                  <h3 id= 'timer'><span id= 'time'>Time:</span></h3>
+            <header class="score-timer">
+                <h3 id='top-score'><span>View High Score</span></h3>
+                <h3 id= 'timer'><span id= 'time'>Time:</span></h3>
+                 
+            </header>
 
-
-                  </div> 
-              </header>
-
-              <Section class="card-body">
+            <section class="card-body">
                 <h1 id='title'>Coding Quiz Challenge</h1>
                 <p id= 'instruction'>Try to answer the following code-related questions
                     within the time limit. keep in mind that the incorrect 
                     answers will penalize your score time by ten seconds!
                 </p>
                 <button id="Start" class="start-btn">Start-Quiz</button>
-            </Section>
+            </section>
  
                 
-              <section class="container">
-                <div class ='quest-cont' class="hide">
+            <section class="container">
+                <div id ='quest-cont' class="hide">
                     <div id='question' class= "quest">Question</div>
                     <div id ="ans-btn" class= "btn-grid">
-                        <button class= "button">Ans 1</button>
-                        <button class= "button">Ans 2</button>
-                        <button class= "button">Ans 3</button>
-                        <button class= "button">Ans 4</button>
+                        <button class= "btn" id='btn-0'></button>
+                        <button class= "btn" id='btn-1'></button>
+                        <button class= "btn" id='btn-2'></button>
+                        <button class= "btn" id='btn-3'></button>
                        </div>
                     </div>
-                
-                 </section>
+                    </section>
 
           
-                 <section class= container-2>
-                      <hi>All DOne!</hi>
-                <p>Your final score is</p>
+            <section class= "container-2 ">
+                <div class="hide">         
+                    <h1>All Done!</h1>
+                    <p>Your final score is</p>
+                        <form class='inline'>
+                            <label for="name" id= "enter-name">Enter you name here:</label><br>
+                            <input type= 'text' id= 'f-name' name='f-name' value= ''><br>
+                            <input type="submit-btn" id= 'sub-btn' value="Submit">
+                        </form>
+                </div>
+            </section>
 
-            <form>
-            <label for="name">Enter you name here</label><br>
-            <input type= 'text' id= 'f-name' name='f-name' value= ''><br>
-            <input type="submit" value="Submit">
-            </form>
-<section class= container-3>
-    <h1>High Score</h1>
-    <textarea
-    id="password"
-    placeholder="score"
-    aria-label="High-score"></textarea>
-    <button id = 'navigate'>Go Back</button>
-    <button id= 'clear'>Clear High Score</button>        
-       </div>
-</container>
+
+            
+            <section class= container-3>
+                <div class="hide">
+                    <h1>High Score</h1>
+                    <textarea id="score"></textarea>
+                    <button onclick='back' id = 'navigate'>Go Back</button>
+                    <button onclick="High-score" id='clear'>Clear High Score</button>        
+                </div>
+            </section>
+
+            <section class="card-body">
+                <h1 id='title'>Coding Quiz Challenge</h1>
+                <p id= 'instruction'>Try to answer the following code-related questions
+                    within the time limit. keep in mind that the incorrect 
+                    answers will penalize your score time by ten seconds!
+                </p>
+                <button id="Start" class="start-btn">Start-Quiz</button>
+            </section>
+ 
+                
+
                 <script src= './assets/js/script.js'></script> 
                 <script src= './assets/question.js'></script> 
         </body>
