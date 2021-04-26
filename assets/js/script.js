@@ -111,4 +111,102 @@ option:[
     "alert('Hello World')",
 ]
 }
-]
+]var button1= document.querySelector('#btn-1');
+var button2= document.querySelector('#btn-2');
+var button3= document.querySelector('#btn-3');
+ 
+function questionElement(index){
+    let question = document.querySelector("question");
+    let button = document.querySelector("btn");
+    document.querySelector("question").textContent = question[index].questions;
+    document.querySelector("btn-0").textContent = question[index].options;
+    document.querySelector("btn-1").textContent = question[index].options;
+    document.querySelector("btn-2").textContent = question[index].options;
+    document.querySelector("btn-3").textContent = question[index].options;
+    }
+button0.addEventListener("click", function(event) {
+ console.log('event', event.target.id)
+ answer(event.target.id)
+ count++;
+ showQuestion(count);
+
+
+});
+button1.addEventListener("click", function(event) {
+ console.log('event', event.target.id)
+ answer(event.target.id)
+ count++;
+ showQuestion(count);
+});
+button2.addEventListener("click", function(event) {
+ console.log('event', event.target.id)
+ answer(event.target.id)
+ count++;
+ showQuestion(count);
+});
+
+button2.addEventListener("click", function(event) {
+ console.log('event', event.target.id)
+ answer(event.target.id)
+ count++;
+ showQuestion(count);
+});
+// event listener for buttons
+var button0= document.querySelector('#btn-0');
+var button1= document.querySelector('#btn-1');
+var button2= document.querySelector('#btn-2');
+var button3= document.querySelector('#btn-3');
+ 
+function questionElement(index){
+    let question = document.querySelector("question");
+    let button = document.querySelector("btn");
+    document.querySelector("question").textContent = question[index].questions;
+    document.querySelector("btn-0").textContent = question[index].options;
+    document.querySelector("btn-1").textContent = question[index].options;
+    document.querySelector("btn-2").textContent = question[index].options;
+    document.querySelector("btn-3").textContent = question[index].options;
+    }
+
+button0.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   
+   
+   });
+   button1.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   button2.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   
+   button2.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   
+function chooseAnswer(id){
+    if (id === question[count].option) {
+        Audio.play();
+    } else {
+        timeLeft = timeLeft - 5
+    }
+}
+
+function correctAnswer (id){
+    if (id === correctAnswer.option) {
+        
+    }
+}
+
+
