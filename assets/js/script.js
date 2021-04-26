@@ -1,45 +1,52 @@
 // add a start elemnent and function to begin the quiz//
 
-const startButton = document.getElementById('Start')
-const questionContianer = document.getElementById('quest-cont')
-
+const startButton = document.getElementById('start')
+const questionContainer = document.getElementById('quest-cont')
 const questionElement = document.getElementById('question')
+const answerElement= document.getElementById('ans-btn')
+const beginElement=document.getElementById('begin')
+let shuffleQuestion,currentQuestion
 
+startButton.addEventListener('click', startQuiz)
 
-
-startButton.addEventListener("click" , startQuiz)
 function startQuiz() {
 console.log('started')
-startButton.classList.add('hide')
-
-shuffleQuestion = question.sort(() => Math.randdom() - .5)
+beginElement.classList.add('hide')
+shuffleQuestion = question.sort(() => Math.random() - .5)
 currentQuestion = 0
-questionContianer.classList.remove('hide')
+questionContainer.classList.remove('hide')
 nextQuestion()
-}
 
+}
 function nextQuestion() {
     showQuestion(shuffleQuestion[currentQuestion])
+    
 }
-function showQuestion(question){
+function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answer.forEach(answer => {
-        const button = documnet.getElementById('answers')
-    button.innerText = answer.text
+    question.option.forEach(option => {
+    const button = document.createElement('button')
+    button.innerText = option.text
     button.classList.add('btn')
-    if (answer.correct) {
-        button.dataset.correct = answer.correct
+    if (option.correct) {
+        button.dataset.correct = option.correct
     }
-        button.addEventListener("click")
+        button.addEventListener("click" ,chooseAnswer)
         answerElement.appendChild(button)
     }
-    
 
-})
+      )
 
+}
 
+function resetState() {
+    nextButton.classList.add("hide")
+    while (answerElement.fistChild) {
+        answerElement.removeChild
+        (answerElement.firstChild)
+    }
+}
 // event listener for buttons
-var button0= document.querySelector('#btn-0');
 var button1= document.querySelector('#btn-1');
 var button2= document.querySelector('#btn-2');
 var button3= document.querySelector('#btn-3');
@@ -53,40 +60,37 @@ function questionElement(index){
     document.querySelector("btn-2").textContent = question[index].options;
     document.querySelector("btn-3").textContent = question[index].options;
     }
+
 button0.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-
-
-});
-button1.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
-button2.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
-
-button2.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
-
-
- 
-
-
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   
+   
+   });
+   button1.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   button2.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   
+   button2.addEventListener("click", function(event) {
+    console.log('event', event.target.id)
+    answer(event.target.id)
+    count++;
+    showQuestion(count);
+   });
+   
 function chooseAnswer(id){
-    if (id === question[count].answer) {
+    if (id === question[count].option) {
         Audio.play();
     } else {
         timeLeft = timeLeft - 5
@@ -94,7 +98,7 @@ function chooseAnswer(id){
 }
 
 function correctAnswer (id){
-    if (id === correctAnswer.answer) {
+    if (id === correctAnswer.option) {
         
     }
 }
@@ -102,7 +106,7 @@ function correctAnswer (id){
 
 
 
-const question =[ 
+const questions = [ 
     {
     question: "what does HTML stand for?",
     answer: "btn-2",
@@ -114,9 +118,9 @@ const question =[
     ]
 },
 {
-questions:"Choose the correct HTML element for the largest heading:",
+question:"Choose the correct HTML element for the largest heading:",
 answer: "btn-2",
-options: [
+option: [
     "<h6>",
     "<heading>",
     "<h1>",
@@ -126,7 +130,7 @@ options: [
 {
 question: "What does css stand for?",
 answer:"btn-0",
-options: [
+option: [
     "WHat does css stand for?",
     "Cascading Style Sheet",
     "Colorful Style Sheets",
@@ -137,7 +141,7 @@ options: [
 {
 question: "Which CSS property controls the text size?",
 answer: "btn-1",
-options: [
+option: [
     "text-size",
     "font-size",
     "text-style",
@@ -147,7 +151,7 @@ options: [
 {
 question: "Where is the correct place to insert a JavaScript?",
 answer:"btn-3", 
-options:[
+option:[
     "Both the <head> section and the <body> section are correct",
     "The <body> section",
     "The <head> section",
@@ -164,4 +168,5 @@ option:[
     "alertBox('Hello World')",
     "alert('Hello World')",
 ]
-}]
+}
+]
