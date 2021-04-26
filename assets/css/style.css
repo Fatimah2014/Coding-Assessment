@@ -47,8 +47,12 @@ body{
     box-shadow: 0 0 10px 2px ;
     border-radius: 20px;
     height: 60%;
+    z-index: 1;
 }
 
+.container {
+    /* z-index: 2; */
+}
 
 #title{
 

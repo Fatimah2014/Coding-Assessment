@@ -1,71 +1,74 @@
 <!DOCTYPE html>
-<html lang= 'en'>
-    <head>
-        <meta charset='UTF-8'>
-        <meta name= 'viewpoint' content='width-device-width, initial-scale-1.0'>
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel='stylesheet' href='./assets/css/style.css'>
-        <title>Code-Quize</title>
-        <body>
-            <header class="score-timer">
-                <h3 id='top-score'><span>View High Score</span></h3>
-                <h3 id= 'timer'><span id= 'time'>Time:</span></h3>
-                 
-            </header>
+<html lang='en'>
 
- 
-                
-            <section class="container">
-                <div id ='quest-cont' class="hide">
-                    <div id='question' class= "quest">Question</div>
-                    <div id ="ans-btn" class= "btn-grid">
-                        <button class= "btn" id='btn-0'></button>
-                        <button class= "btn" id='btn-1'></button>
-                        <button class= "btn" id='btn-2'></button>
-                        <button class= "btn" id='btn-3'></button>
-                       </div>
-                    </div>
-                    </section>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewpoint' content='width-device-width, initial-scale-1.0'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='./assets/css/style.css'>
+    <title>Code-Quize</title>
 
-          
-            <section class= "container-2 ">
-                <div class="hide">         
-                    <h1>All Done!</h1>
-                    <p>Your final score is</p>
-                        <form class='inline'>
-                            <label for="name" id= "enter-name">Enter you name here:</label><br>
-                            <input type= 'text' id= 'f-name' name='f-name' value= ''><br>
-                            <input type="submit-btn" id= 'sub-btn' value="Submit">
-                        </form>
-                </div>
-            </section>
+<body>
+    <header class="score-timer">
+        <h3 id='top-score'><span>View High Score</span></h3>
+        <h3 id='timer'>Time: <span id='time'>15</span></h3>
+
+    </header>
 
 
-            
-            <section class= container-3>
-                <div class="hide">
-                    <h1>High Score</h1>
-                    <textarea id="score"></textarea>
-                    <button onclick='back' id = 'navigate'>Go Back</button>
-                    <button onclick="High-score" id='clear'>Clear High Score</button>        
-                </div>
-            </section>
 
-            <section class="card-body">
-                <div  id= "begin">
-                <h1 id='title'>Coding Quiz Challenge</h1>
-                <p id= 'instruction'>Try to answer the following code-related questions
-                    within the time limit. keep in mind that the incorrect 
-                    answers will penalize your score time by ten seconds!
-                </p>
-                <button id="start" class="start-btn">Start-Quiz</button>
-                </div>
-            </section>
- 
-                
+    <section class="container hidew" id="quest-cont">
+        <div id='quest-cont'>
+            <div id='question' class="quest">Question</div>
+            <div id="ans-btn" class="btn-grid">
+                <button class="btn" id='btn-0'></button>
+                <button class="btn" id='btn-1'></button>
+                <button class="btn" id='btn-2'></button>
+                <button class="btn" id='btn-3'></button>
+            </div>
+        </div>
+    </section>
 
-                <script src= './assets/js/script.js'></script> 
-               
-        </body>
-    </head>    
+
+    <section class="container-2 hide">
+   
+            <h1>All Done!</h1>
+            <p>Your final score is</p>
+            <form class='inline'>
+                <label for="name" id="enter-name">Enter you name here:</label><br>
+                <input type='text' id='f-name' name='f-name' value=''><br>
+                <input type="submit-btn" id='sub-btn' value="Submit">
+            </form>
+      
+    </section>
+
+
+
+    <section class='container-3 hide'>
+        
+            <h1>High Score</h1>
+            <textarea id="score"></textarea>
+            <button onclick='back' id='navigate'>Go Back</button>
+            <button onclick="High-score" id='clear'>Clear High Score</button>
+        
+    </section>
+
+    <section class="card-body" id="begin">
+        
+            <h1 id='title'>Coding Quiz Challenge</h1>
+            <p id='instruction'>Try to answer the following code-related questions
+                within the time limit. keep in mind that the incorrect
+                answers will penalize your score time by ten seconds!
+            </p>
+            <button id="start" class="start-btn">Start-Quiz</button>
+        
+    </section>
+
+
+
+    <script src='./assets/js/script.js'></script>
+
+</body>
+</head>
+
 </html>

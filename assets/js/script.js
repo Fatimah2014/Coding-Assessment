@@ -5,38 +5,61 @@ const questionContainer = document.getElementById('quest-cont')
 const questionElement = document.getElementById('question')
 const answerElement= document.getElementById('ans-btn')
 const beginElement=document.getElementById('begin')
-let shuffleQuestion,currentQuestion
+const optionBtnElements = document.querySelectorAll(".btn")
+const timeElement = document.getElementById("time")
+let shuffleQuestion, currentQuestion, countdown, score;
+
 
 startButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
-console.log('started')
-beginElement.classList.add('hide')
-shuffleQuestion = question.sort(() => Math.random() - .5)
-currentQuestion = 0
-questionContainer.classList.remove('hide')
-nextQuestion()
-
+    console.log('started')
+    beginElement.classList.add('hide')
+    // shuffleQuestion = question.sort(() => Math.random() - .5)
+    currentQuestion = 0;
+    questionContainer.classList.remove('hide')
+    startTimer()
+    nextQuestion()
 }
+
 function nextQuestion() {
-    showQuestion(shuffleQuestion[currentQuestion])
+    showQuestion()
     
 }
-function showQuestion(question) {
-    questionElement.innerText = question.question
-    question.option.forEach(option => {
-    const button = document.createElement('button')
-    button.innerText = option.text
-    button.classList.add('btn')
-    if (option.correct) {
-        button.dataset.correct = option.correct
-    }
-        button.addEventListener("click" ,chooseAnswer)
-        answerElement.appendChild(button)
-    }
 
-      )
+function showQuestion() {
+    questionElement.innerText = questions[currentQuestion].question
+    optionBtnElements.forEach( (element, i) => {
+        element.textContent = questions[currentQuestion].options[i];
+        element.addEventListener("click", checkAnswerAndIterate);
+    })
+    // question.option.forEach(option => {
+    // const button = document.createElement('button')
+    // button.innerText = option.text
+    // button.classList.add('btn')
+    // if (option.correct) {
+    //     button.dataset.correct = option.correct
+    // }
+    //     button.addEventListener("click" ,chooseAnswer)
+    //     answerElement.appendChild(button)
+    // }
 
+    //   )
+
+}
+
+function checkAnswerAndIterate() {
+    console.log(this.id)
+    if(this.id === questions[currentQuestion].answer){
+        console.log('correct')
+    }else {
+        countdown-= 5;
+        console.log('incorrect')
+    }
+    currentQuestion++;
+    if(currentQuestion < questions.length){
+        showQuestion()
+    }
 }
 
 function resetState() {
@@ -45,6 +68,23 @@ function resetState() {
         answerElement.removeChild
         (answerElement.firstChild)
     }
+}
+
+function startTimer (){
+    countdown = 150;
+    var interval = setInterval(function (){
+        countdown --;
+        timeElement.textContent = countdown;
+
+        if(countdown <=0 || currentQuestion >= questions.length){
+            clearInterval(interval)
+            //Quiz ending function
+            //something here
+            //pls
+            //help
+    
+        }
+    }, 1000)
 }
 
 
@@ -62,7 +102,7 @@ const questions = [
 {
 question:"Choose the correct HTML element for the largest heading:",
 answer: "btn-2",
-option: [
+options: [
     "<h6>",
     "<heading>",
     "<h1>",
@@ -72,7 +112,7 @@ option: [
 {
 question: "What does css stand for?",
 answer:"btn-0",
-option: [
+options: [
     "WHat does css stand for?",
     "Cascading Style Sheet",
     "Colorful Style Sheets",
@@ -83,7 +123,7 @@ option: [
 {
 question: "Which CSS property controls the text size?",
 answer: "btn-1",
-option: [
+options: [
     "text-size",
     "font-size",
     "text-style",
@@ -93,7 +133,7 @@ option: [
 {
 question: "Where is the correct place to insert a JavaScript?",
 answer:"btn-3", 
-option:[
+options:[
     "Both the <head> section and the <body> section are correct",
     "The <body> section",
     "The <head> section",
@@ -104,109 +144,110 @@ option:[
 {
 question: 'How do you write "Hello World" in an alert box?',
 answer: 'button',
-option:[
+options:[
    "msgBox('Hello World')",
     "msg('Hello World')",
     "alertBox('Hello World')",
     "alert('Hello World')",
 ]
 }
-]var button1= document.querySelector('#btn-1');
-var button2= document.querySelector('#btn-2');
-var button3= document.querySelector('#btn-3');
+]
+// var button1= document.querySelector('#btn-1');
+// var button2= document.querySelector('#btn-2');
+// var button3= document.querySelector('#btn-3');
  
-function questionElement(index){
-    let question = document.querySelector("question");
-    let button = document.querySelector("btn");
-    document.querySelector("question").textContent = question[index].questions;
-    document.querySelector("btn-0").textContent = question[index].options;
-    document.querySelector("btn-1").textContent = question[index].options;
-    document.querySelector("btn-2").textContent = question[index].options;
-    document.querySelector("btn-3").textContent = question[index].options;
-    }
-button0.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
+// function questionElement(index){
+//     let question = document.querySelector("question");
+//     let button = document.querySelector("btn");
+//     document.querySelector("question").textContent = question[index].questions;
+//     document.querySelector("btn-0").textContent = question[index].options;
+//     document.querySelector("btn-1").textContent = question[index].options;
+//     document.querySelector("btn-2").textContent = question[index].options;
+//     document.querySelector("btn-3").textContent = question[index].options;
+//     }
+// button0.addEventListener("click", function(event) {
+//  console.log('event', event.target.id)
+//  answer(event.target.id)
+//  count++;
+//  showQuestion(count);
 
 
-});
-button1.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
-button2.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
+// });
+// button1.addEventListener("click", function(event) {
+//  console.log('event', event.target.id)
+//  answer(event.target.id)
+//  count++;
+//  showQuestion(count);
+// });
+// button2.addEventListener("click", function(event) {
+//  console.log('event', event.target.id)
+//  answer(event.target.id)
+//  count++;
+//  showQuestion(count);
+// });
 
-button2.addEventListener("click", function(event) {
- console.log('event', event.target.id)
- answer(event.target.id)
- count++;
- showQuestion(count);
-});
-// event listener for buttons
-var button0= document.querySelector('#btn-0');
-var button1= document.querySelector('#btn-1');
-var button2= document.querySelector('#btn-2');
-var button3= document.querySelector('#btn-3');
+// button2.addEventListener("click", function(event) {
+//  console.log('event', event.target.id)
+//  answer(event.target.id)
+//  count++;
+//  showQuestion(count);
+// });
+// // event listener for buttons
+// var button0= document.querySelector('#btn-0');
+// var button1= document.querySelector('#btn-1');
+// var button2= document.querySelector('#btn-2');
+// var button3= document.querySelector('#btn-3');
  
-function questionElement(index){
-    let question = document.querySelector("question");
-    let button = document.querySelector("btn");
-    document.querySelector("question").textContent = question[index].questions;
-    document.querySelector("btn-0").textContent = question[index].options;
-    document.querySelector("btn-1").textContent = question[index].options;
-    document.querySelector("btn-2").textContent = question[index].options;
-    document.querySelector("btn-3").textContent = question[index].options;
-    }
+// function questionElement(index){
+//     let question = document.querySelector("question");
+//     let button = document.querySelector("btn");
+//     document.querySelector("question").textContent = question[index].questions;
+//     document.querySelector("btn-0").textContent = question[index].options;
+//     document.querySelector("btn-1").textContent = question[index].options;
+//     document.querySelector("btn-2").textContent = question[index].options;
+//     document.querySelector("btn-3").textContent = question[index].options;
+//     }
 
-button0.addEventListener("click", function(event) {
-    console.log('event', event.target.id)
-    answer(event.target.id)
-    count++;
-    showQuestion(count);
+// button0.addEventListener("click", function(event) {
+//     console.log('event', event.target.id)
+//     answer(event.target.id)
+//     count++;
+//     showQuestion(count);
    
    
-   });
-   button1.addEventListener("click", function(event) {
-    console.log('event', event.target.id)
-    answer(event.target.id)
-    count++;
-    showQuestion(count);
-   });
-   button2.addEventListener("click", function(event) {
-    console.log('event', event.target.id)
-    answer(event.target.id)
-    count++;
-    showQuestion(count);
-   });
+//    });
+//    button1.addEventListener("click", function(event) {
+//     console.log('event', event.target.id)
+//     answer(event.target.id)
+//     count++;
+//     showQuestion(count);
+//    });
+//    button2.addEventListener("click", function(event) {
+//     console.log('event', event.target.id)
+//     answer(event.target.id)
+//     count++;
+//     showQuestion(count);
+//    });
    
-   button2.addEventListener("click", function(event) {
-    console.log('event', event.target.id)
-    answer(event.target.id)
-    count++;
-    showQuestion(count);
-   });
+//    button2.addEventListener("click", function(event) {
+//     console.log('event', event.target.id)
+//     answer(event.target.id)
+//     count++;
+//     showQuestion(count);
+//    });
    
-function chooseAnswer(id){
-    if (id === question[count].option) {
-        Audio.play();
-    } else {
-        timeLeft = timeLeft - 5
-    }
-}
+// function chooseAnswer(id){
+//     if (id === question[count].option) {
+//         Audio.play();
+//     } else {
+//         timeLeft = timeLeft - 5
+//     }
+// }
 
-function correctAnswer (id){
-    if (id === correctAnswer.option) {
+// function correctAnswer (id){
+//     if (id === correctAnswer.option) {
         
-    }
-}
+//     }
+// }
 
 
