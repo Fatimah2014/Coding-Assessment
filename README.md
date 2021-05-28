@@ -21,6 +21,7 @@ note:
  https://fatimah2014.github.io/Coding-Assessment/
  
  
+![code-assess](https://user-images.githubusercontent.com/80806004/119921660-60ecb280-bf3c-11eb-8fb2-52c6fac3e8c7.jpg)
 
 
 
