@@ -1,16 +1,16 @@
 # Coding-Assessment
 This application is a code assement. Allows you to answer five timed questions and gives you the top score at the end
 ## steps
- when you go into the browser 
- when you press start
- then the timer starts and the you are prsented with the first question 
- when you anmswer the question 
- you are then presented with another question 
- if you answer the question incorrectly 
- then the time is subtracted from the clock 
- all the question are answerd or the timer reaches 0 and time is up
- the game is over
- then you can save oyu initials and your score 
+- when you go into the browser 
+- when you press start
+- then the timer starts and the you are prsented with the first question 
+- when you anmswer the question 
+- you are then presented with another question 
+- if you answer the question incorrectly 
+- then the time is subtracted from the clock 
+- all the question are answerd or the timer reaches 0 and time is up
+- then the game is over
+- then you can save oyu initials and your score 
 
 note:
  you have 10 minuste to complete the quix
