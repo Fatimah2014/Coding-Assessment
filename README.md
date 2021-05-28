@@ -1,5 +1,6 @@
 # Coding-Assessment
-
+This application is a code assement. Allows you to answer five timed questions and gives you the top score at the end
+#steps
  when you go into the browser 
  when you press start
  then the timer starts and the you are prsented with the first question 
