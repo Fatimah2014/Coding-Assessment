@@ -3,7 +3,7 @@ This application is a code assement. Allows you to answer five timed questions a
 ## steps
 - when you go into the browser 
 - when you press start
-- then the timer starts and the you are prsented with the first question 
+- then the timer starts and the you are persented with the first question 
 - when you anmswer the question 
 - you are then presented with another question 
 - if you answer the question incorrectly 
