@@ -13,7 +13,7 @@ This application is a code assement. Allows you to answer five timed questions a
 - then you can save oyu initials and your score 
 
 note:
- you have 10 minuste to complete the quix
+ you have 10 minuste to complete the quiz
  you will loose 30 seconds for every false answer
  ..
 
